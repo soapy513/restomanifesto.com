@@ -1,0 +1,32 @@
+1) the_content creates a more link automatically but does not shorten the content implicitly to the length of an excerpt, also if it is_single this will automatically display all the content
+2) the_excerpt uses the existing excerpt or creates an implicit one but does not create a more link, also takes out images and other extraneous markup
+
+3) semantically, i want an excerpt that contains a more link
+
+<?php the_excerpt(); ?>
+
+/* contains useful snippets from wordpress codex and otherwise. */
+
+// change the length of the_excerpt (functions.php)
+function new_excerpt_length($length) {
+	return 20;
+}
+add_filter('excerpt_length', 'new_excerpt_length');
+
+// decide to display the_excerpt or the_content (template loop)
+<?php if ( is_category() || is_archive() ) {
+	the_excerpt();
+} else {
+	the_content();
+} ?>
+
+// change the more string at the end of an excerpt with link to post (functions.php)
+function new_excerpt_more($more) {
+	// $more contains the shortened content to operate on
+    global $post;
+	return '<a href="'. get_permalink($post->ID) . '">' . 'Read the Rest...' . '</a>';
+}
+add_filter('excerpt_more', 'new_excerpt_more');
+
+// figure out if a post has an explicit excerpt (template loop)
+<?php has_excerpt( $id ); ?>

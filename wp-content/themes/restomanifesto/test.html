@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Test Menu</title>
+		<meta charset="utf-8">
+		
+		<style>
+			body, nav, ul, li {
+				margin:0;
+				padding:0;
+			}
+			
+			#main-nav {
+				width:100%;
+				background-color:red;
+			}
+			
+			.menu {
+				overflow:auto;
+			}
+			
+			li {
+				list-style:none;
+			}
+			
+
+/* ul element */
+.menu {
+	overflow: auto;
+	margin:0;
+}
+
+/* ul li element */
+.menu-item {
+	float: left;
+	text-align: center;
+	position: relative;
+	list-style: none;
+}
+
+/* ul a element */
+.menu a {
+	display: block;
+	padding:0.895808695546701em 2em 0.786644348622406em 2em;
+}
+
+/* ul>li>a element */
+.menu-item a:hover {
+	background-color: #000;
+	color: #fff;
+}
+
+/* ul>li>ul element */
+li.menu-item:hover > ul {
+	display: block;
+}
+
+/* ul>li>ul element */
+.sub-menu {
+	display: none;
+	margin:0;
+	padding:0;
+	width: 10em;
+	position: absolute;
+	top:50px;
+	left:0;
+	background-color: #000;
+}
+
+/* ul>li>ul>li element */
+.sub-menu .menu-item {
+	float:none;
+	text-align: left;
+	margin:0;
+	padding: 0;
+}
+
+		
+		</style>
+		
+	</head>
+	<body>
+	<nav id="main-nav">
+		<ul class="menu">
+			<li class="menu-item"><a>Home</a></li>
+			<li class="menu-item"><a>Categories</a>
+				<ul class="sub-menu">
+					<li class="menu-item"><a>Category 1</a></li>
+					<li class="menu-item"><a>Category 2</a></li>
+					<li class="menu-item"><a>Category 3</a></li>
+					<li class="menu-item"><a>Category 4</a></li>
+					<li class="menu-item"><a>Category 5</a></li>
+				</ul>
+			</li>
+			<li class="menu-item"><a>Gallery</a></li>
+			<li class="menu-item"><a>About</a></li>
+			<li class="menu-item"><a>Contact</a></li>
+		</ul>
+	</nav>
+	</body>
+</html>
