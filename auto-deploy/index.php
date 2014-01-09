@@ -26,7 +26,7 @@ if (isset($_SERVER['REMOTE_ADDR'])) {
   $remote_ip = $_SERVER['REMOTE_ADDR'];
 }
 if(!isset($allowed_ips) || !in_array($remote_ip, $allowed_ips, true)) {
-  _log("The POST came from an IP that isn't allowed: " . $remote_ip);
+  _log("The POST came from an IP that isn't allowed: " . $remote_ip . "\n");
   return;
 }
 
