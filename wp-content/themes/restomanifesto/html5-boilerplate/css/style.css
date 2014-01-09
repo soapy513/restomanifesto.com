@@ -334,7 +334,7 @@ header h1 a {
 	font-size: 1.175em;
 	position: absolute;
 	top: 0;
-	right: 0;
+	left: 0;
 	padding: .4em .4em;
 	background-color: #f00;
 	-moz-border-radius-bottomright: 6px;
