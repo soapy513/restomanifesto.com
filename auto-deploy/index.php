@@ -6,6 +6,7 @@
 require('config.php');
 
 function _log($message) {
+  global $deploy_log;
   if(isset($deploy_log) && !empty($deploy_log)) {
     if (file_exists($deploy_log) && is_writable($deploy_log)) {
       file_put_contents($deploy_log, $message, FILE_APPEND);
