@@ -4,7 +4,7 @@
 $allowed_branches = array('refs/heads/master');
 
 // If this is set, only POST requests from one of these IPs will be honored
-$allowed_ips = array('207.97.227.253', '50.57.128.197', '108.171.174.178', '72.5.167.148' ); // These are for GitHub
+$allowed_ips = array('207.97.227.253', '50.57.128.197', '108.171.174.178', '72.5.167.148', '192.30.252.51' ); // These are for GitHub
 
 // The user to sudo in as to run the git pull command from.
 $deploy_user = 'restomanifesto';
