@@ -336,7 +336,7 @@ header h1 a {
 	top: 0;
 	right: 0;
 	padding: .4em .4em;
-	background-color: #000;
+	background-color: #f00;
 	-moz-border-radius-bottomright: 6px;
 	-moz-border-radius-bottomleft: 6px;
 	-webkit-border-bottom-right-radius: 6px;
